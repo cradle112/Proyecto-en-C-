@@ -1,0 +1,300 @@
+//Examen final de Introducción a Algoritmos
+
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h> 
+#include <math.h>   
+#include <string>
+#include <stdio.h>
+#include <sstream>
+#include "windows.h"
+
+using namespace std;
+
+void restaVectores()
+	{
+		string variableMostrarResultado1="";// Para mostrar resultado
+		string variableMostrarResultado2="";// Para mostrar resultado
+		string variableMostrarResultado3="";// Para mostrar resultado
+		int tamano=0;//Variable para almacenar el tamaño del vector
+		string tmp; // Variable temporal
+		ostringstream tempConverNumero;
+		float vect1[15],vect2[15],resultado[15];// Arreglos para almacenar los vectores y el resultado
+		system("cls") ;// Limpia pantalla 
+		cout<<"Ingrese Tamaño del los Vectores \n";// Solicita tamaño del vector
+		cin>>tamano;// Captura tamaño digitada por el usuario
+		if(tamano>=1 && tamano <15){// Solo permite un tamano entre 1 y 15
+			for(int i=0;i<tamano;i++){
+				cout<<"Ingrese dato "<<(i+1)<<" del Vector UNO \n";// Solicita tamaño del vector
+				cin>>vect1[i];// Captura el tamaño digitado
+			}
+			for(int i=0;i<tamano;i++){// Captura segun el tamaño el vector 1
+				cout<<"Ingrese dato "<<(i+1)<<" del Vector DOS \n";// Solicita tamaño del vector
+				cin>>vect2[i];// Captura el dato digitado
+			}
+			for(int i=0;i<tamano;i++){// Captura segun el tamaño el vector 2
+				resultado[i]=vect1[i]+vect2[i];// Captura el dato digitado
+			}
+			
+			for(int i=0;i<tamano;i++){
+				resultado[i]=vect1[i]-vect2[i];// Resta vectores
+			}
+			variableMostrarResultado1="Vector 1= ";
+			variableMostrarResultado2="Vector 2= ";
+			for(int i=0;i<tamano;i++){ // Para armar la salida bonita
+			  
+			  variableMostrarResultado1+="("+IntToString(vect1[i])+")";		  
+			  variableMostrarResultado2+="("+IntToString(vect2[i])+")";
+			  variableMostrarResultado3+="("+IntToString(resultado[i])+")";
+			  if(i<tamano){
+			  	variableMostrarResultado1+=",";
+			  	variableMostrarResultado2+=",";
+			  	variableMostrarResultado3+=",";
+			  }
+			  
+			 
+			}
+			
+			cout<<variableMostrarResultado1<<"\n";
+			cout<<variableMostrarResultado2<<"\n";
+			cout<<"(Vector 1) - (Vector 2)="<<variableMostrarResultado3<<"\n";
+					system("cls") ;// Limpia pantalla segun requerimiento
+			}	
+		}
+void numerosPrimos()
+	{
+	string tmp; // Variable temporal
+	int inicio=0;// Inicio numeros primos
+	int final =0;//Fin numeros primos
+	cout<<"Ingrese el inicio de los Numeros Primos \n";// Solicita inicio
+	cin>>inicio;// Captura tamaño digitada por el usuario
+	cout<<"Ingrese el final de los Numeros Primos \n";// Solicita final
+	cin>>final;// Captura tamaño digitada por el usuario
+	for(int i=inicio;i<=final;i++){
+		//cout<<i<<"-"<<(i%2)<<"\n";
+		if(i%2!=0){
+			cout<<i;
+			if(i<final){
+				cout<<",";
+			}
+		}
+		if(i==2){
+			cout<<i;
+			if(i<final){
+				cout<<",";
+			}
+		}
+		
+		}
+	system("cls") ;// Limpia pantalla segun requerimiento	
+	}	
+
+void sumaVectores()
+	{
+		string variableMostrarResultado1="";// para mostrar resultado
+		string variableMostrarResultado2="";// para mostrar resultado
+		string variableMostrarResultado3="";// para mostrar resultado
+		int tamano=0;//variable para almacenar el tamaño del vector
+		string tmp; // variable temporal
+		ostringstream tempConverNumero;
+		float vect1[15],vect2[15],resultado[15];// arreglos para almacenar los vectores y el resultado
+		system("cls") ;// limpia pantalla 
+		cout<<"Ingrese Tamaño del los Vectores \n";// solicita tamaño del vector
+		cin>>tamano;// captura tamaño digitada por el usuario
+		if(tamano>=1 && tamano <15){// solo permite un tamano entre 1 y 15
+			for(int i=0;i<tamano;i++){
+				cout<<"Ingrese dato "<<(i+1)<<" del Vector UNO \n";// solicita tamaño del vector
+				cin>>vect1[i];// captura el tamaño digitado
+			}
+			for(int i=0;i<tamano;i++){// captura segun el tamaño el vector 1
+				cout<<"Ingrese dato "<<(i+1)<<" del Vector DOS \n";// solicita tamaño del vector
+				cin>>vect2[i];// captura el dato digitado
+			}
+			for(int i=0;i<tamano;i++){// captura segun el tamaño el vector 2
+				resultado[i]=vect1[i]+vect2[i];// captura el dato digitado
+			}
+			
+			for(int i=0;i<tamano;i++){
+				resultado[i]=vect1[i]+vect2[i];// resta vectores
+			}
+			variableMostrarResultado1="Vector 1= ";
+			variableMostrarResultado2="Vector 2= ";
+			for(int i=0;i<tamano;i++){ // para armar la salida bonita
+			  
+			  variableMostrarResultado1+="("+IntToString(vect1[i])+")";		  
+			  variableMostrarResultado2+="("+IntToString(vect2[i])+")";
+			  variableMostrarResultado3+="("+IntToString(resultado[i])+")";
+			  if(i<tamano){
+			  	variableMostrarResultado1+=",";
+			  	variableMostrarResultado2+=",";
+			  	variableMostrarResultado3+=",";
+			  }
+			  
+			 
+			}
+			
+			cout<<variableMostrarResultado1<<"\n";
+			cout<<variableMostrarResultado2<<"\n";
+			cout<<"(Vector 1) + (Vector 2)="<<variableMostrarResultado3<<"\n";
+					system("cls") ;// limpia pantalla segun requerimiento
+			}
+	}
+
+int ordenaVector()
+	{
+	  int c,ord;
+	  int tamano=0;
+	  int lista[15];
+	  
+	    cout<<"Ingrese Tamaño del los Vectores \n";// solicita tamaño del vector
+		cin>>tamano;// captura tamaño digitada por el usuario
+		string tmp;
+		if(tamano>=1 && tamano <15){// solo permite un tamano entre 1 y 15
+		
+			for(c=0;c<tamano;c++)
+			  {
+			    cout<<"Numero "<<c+1<<": "; cin>>lista[c];
+			  }
+			  
+			    ordenar(lista,2,tamano);
+			  
+	    }
+	    cout<<"\n\nResultado \n";
+	    for(int j=0;j<tamano;j++){
+	  	 cout<<"Posicion("<<j<<")="<<lista[j]<<"\n";
+	  	
+	    }
+	  	system("cls") ;// limpia pantalla segun requerimiento
+	}
+
+int ordenar(int lista[],int ord, int tamano)
+	{
+	  int c1,c2,aux;
+	  for(c1=0;c1<=tamano;c1++)
+	  {
+	    for(c2=0;c2<tamano;c2++)
+	    {
+	      if(ord==1)
+	      {
+	        if(lista[c2]>lista[c2+1])
+	        {
+	          aux=lista[c2];
+	          lista[c2]=lista[c2+1];
+	          lista[c2+1]=aux;
+	        }
+	      }
+	      else
+	      {
+	        if(lista[c2]<lista[c2+1])
+	        {
+	          aux=lista[c2];
+	          lista[c2]=lista[c2+1];
+	          lista[c2+1]=aux;
+	        }
+	      }
+	    }
+	  }
+	  return 0;
+	}
+	
+void gotoxy(int x, int y) 
+	{ 
+	    COORD coord;
+	    coord.X = x; 
+	    coord.Y = y;
+	    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+	}
+	
+void manejoCadena()
+	{
+		char cadena[100];
+		char otracadena[100];
+		string cadena1="";
+		string cadena2="";
+		int opt;
+		cout<<"Digite cadena \n";//
+		fgets(cadena,100,stdin);
+		cin.getline(cadena,100);
+		cadena1 =     string(cadena) ; 
+		cout << "Cadena= " << cadena << endl;	
+		
+		cout << "\n\nConcatenar 1 "<<endl;
+		cout << "MayuscUlas Y Minusculas 2 "<<endl;
+		cout << "Tamaño Cadena 3 "<<endl;
+		cin>> opt;
+		
+		if(opt==1){
+			cout<<"Digite otra cadena \n";//
+			fgets(cadena,100,stdin);
+			cin.getline(cadena,100);
+			cadena2 =     string(cadena) ;         
+			cout << "Cadena= " << cadena << endl;
+			cout << "Cadena2= " << cadena2 << endl;
+			string cadenaUnida  = 	cadena1+cadena2;
+			cout << "\n\n\n(cadena Unida:"<<cadenaUnida<<"\n"<<")"<<endl;    
+		}
+		if(opt==2){
+			cout<<"\n Mayúsculas: "<< strupr(cadena); 
+			cout<<"\n\n Minúsculas: "<< strlwr(cadena);	
+		}
+		if(opt==3){
+			cout<<"\n Tamaño: "<< strlen (cadena); 	
+		}
+		
+		
+		
+		string tmp;
+		system("cls") ;// limpia pantalla segun requerimiento
+	}
+
+int main(){
+	//Solicitar contraseña
+	cout<<"Examen final de los estudiantes del Grupo 304 de Introduccion de Algoritmos:"<<endl;
+	cout<<"-Juan Pablo Acosta Celis - 20171578125."<<endl;
+	cout<<"-Aimer Jose Macias Campos - 20171578004."<<endl;
+	cout<<"Se¤or Usuario, ingrese la contrase¤a. "<<endl;
+	int contraseña;
+	cin>>contraseña;
+	if (contraseña==578125){
+		system("cls");
+		cout<<"Contrase¤a correcta."<<endl;
+		//Solicitud de opciones
+		double opcion;
+		while(opcion!=6){
+		cout<<"Escoja una de las siguientes opciones:"<<endl;
+		cout<<"=====OPCION1: RESTA DE VECTORES====="<<endl;
+		cout<<"=====OPCION2: NUMEROS PRIMOS====="<<endl;
+		cout<<"=====OPCION3: SUMA DE VECTORES====="<<endl;
+		cout<<"=====OPCION4: ORDENAR UN VECTOR====="<<endl;
+		cout<<"=====OPCION5: MANEJO DE CADENAS====="<<endl;
+		cout<<"=====OPCION6: SALIR DEL MENU O ABANDONAR EL PROGRAMA====="<<endl;
+		cin>>opcion;
+			if(opcion==1){
+				restaVectores();
+			}
+			if(opcion==2){
+				numerosPrimos();
+			}
+			if(opcion==3){
+				sumaVectores();
+			}
+			if(opcion==4){
+				ordenaVector();
+			}
+			if(opcion==5){
+				manejoCadena();
+			}
+			if(opcion==6){
+				cout<<"Ha escogido salir."<<endl;
+			}
+			if(opcion>6){
+				cout<<"Opcion no valida."<<endl;
+			}
+		}
+	}
+	else {
+		cout<<"Contrase¤a incorrecta."<<endl;
+	}
+getch();
+return 0;	
+}
